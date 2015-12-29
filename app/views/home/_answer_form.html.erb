@@ -9,6 +9,7 @@
       </div>
       <div class="modal-body">
         <%= form_tag("/answers", method: "post") do %>
+        <input type="hidden" name=answer[question_id] value="<%= @question.id %>">
           <div class="form-group">
             <label for="answer-email" class="control-label">Email:</label>
             <input type="email" name="answer[email]" class="form-control" id="answer-email">

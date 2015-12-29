@@ -18,42 +18,27 @@
 <div class="row">
   <div class="col-sm-8 col-sm-offset-2">
     <div>
-      <button type='button' class="btn btn-success btn-sm" data-toggle="modal" data-target="#answerModal">Submit new answer</button>
+      <button type='button' class="btn btn-success btn-sm" data-toggle="modal" data-target="#answerModal" data-whatever="@mdo">Submit new answer</button>
     </div>
     <%= render 'home/answer_form' %>
+    <% @answer.each do |answer| %>
     <div class="media">
       <div class="media-left">
         <a href="#">
-          <img class="media-object" src="http://api.adorable.io/avatars/285/abott@adorable.io.png" alt="..." width="80" height="80">
+          <img class="media-object" src="<%= answer.gravatar %>" alt="..." width="80" height="80">
         </a>
       </div>
       <div class="media-body">
-        <h4 class="media-heading">a@a.com answered</h4>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nam sed? Hic voluptate debitis, a aliquid ut aliquam quibusdam amet sed. In sint adipisci deleniti expedita iste quod, optio mollitia!
+        <h4 class="media-heading"><%= answer.email %> answered</h4>
+        <%= time_ago_in_words answer.created_at %> ago
+        <br>
+        <%= answer.body %>
       </div>
     </div>
-    <div class="media">
-      <div class="media-left">
-        <a href="#">
-          <img class="media-object" src="http://api.adorable.io/avatars/285/abott@adorable.io.png" alt="..." width="80" height="80">
-        </a>
-      </div>
-      <div class="media-body">
-        <h4 class="media-heading">a@a.com answered</h4>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed doloremque earum blanditiis, temporibus iusto in. Optio iusto, sed eaque, dicta ipsam porro eveniet facere repellat commodi harum, quisquam, provident error!
-      </div>
-    </div>
-    <div class="media">
-      <div class="media-left">
-        <a href="#">
-          <img class="media-object" src="http://api.adorable.io/avatars/285/abott@adorable.io.png" alt="..." width="80" height="80">
-        </a>
-      </div>
-      <div class="media-body">
-        <h4 class="media-heading">a@a.com answered</h4>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, impedit, ut consectetur rem recusandae doloremque officiis alias cupiditate nobis, nulla assumenda aspernatur cum nisi delectus. Quam, sed sint facilis blanditiis.
-      </div>
-    </div>
+    <% end %>
+    <% if @answer.empty? %>
+    <div class="alert alert-info">No answer posted for this question</div>
+    <% end %>
   </div>
 </div>
 </div>
