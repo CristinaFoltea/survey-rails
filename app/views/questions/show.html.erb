@@ -1,0 +1,59 @@
+<h1>Questions route</h1>
+<div class="container">
+  <div class="lead well">
+    <div class="media">
+      <div class="media-left">
+        <a href="#">
+          <img class="media-object" src="<%= @question.gravatar %>" alt="..." width="80" height="80">
+        </a>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">
+          <%= @question.email %>
+        </h4>
+        <%= @question.body %>
+      </div>
+    </div>
+  </div>
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <div>
+      <button type='button' class="btn btn-success btn-sm" data-toggle="modal" data-target="#answerModal">Submit new answer</button>
+    </div>
+    <%= render 'home/answer_form' %>
+    <div class="media">
+      <div class="media-left">
+        <a href="#">
+          <img class="media-object" src="http://api.adorable.io/avatars/285/abott@adorable.io.png" alt="..." width="80" height="80">
+        </a>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">a@a.com answered</h4>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, nam sed? Hic voluptate debitis, a aliquid ut aliquam quibusdam amet sed. In sint adipisci deleniti expedita iste quod, optio mollitia!
+      </div>
+    </div>
+    <div class="media">
+      <div class="media-left">
+        <a href="#">
+          <img class="media-object" src="http://api.adorable.io/avatars/285/abott@adorable.io.png" alt="..." width="80" height="80">
+        </a>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">a@a.com answered</h4>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed doloremque earum blanditiis, temporibus iusto in. Optio iusto, sed eaque, dicta ipsam porro eveniet facere repellat commodi harum, quisquam, provident error!
+      </div>
+    </div>
+    <div class="media">
+      <div class="media-left">
+        <a href="#">
+          <img class="media-object" src="http://api.adorable.io/avatars/285/abott@adorable.io.png" alt="..." width="80" height="80">
+        </a>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">a@a.com answered</h4>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, impedit, ut consectetur rem recusandae doloremque officiis alias cupiditate nobis, nulla assumenda aspernatur cum nisi delectus. Quam, sed sint facilis blanditiis.
+      </div>
+    </div>
+  </div>
+</div>
+</div>

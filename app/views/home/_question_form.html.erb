@@ -1,0 +1,26 @@
+<div class="modal fade" id="questionModal" tabindex="-1" role="dialog" aria-labelledby="questionModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="questionModalLabel">New message</h4>
+      </div>
+      <div class="modal-body">
+        <%= form_tag("/questions", method: "post") do %>
+          <div class="form-group">
+            <label for="question-email" class="control-label">Email:</label>
+            <input type="email" name="question[email]" class="form-control" id="question-email">
+          </div>
+          <div class="form-group">
+            <label for="question-body" class="control-label">Question:</label>
+            <textarea class="form-control" name="question[body]" id="question-body"></textarea>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Send Question</button>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
