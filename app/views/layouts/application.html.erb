@@ -8,12 +8,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav class="navbar navbar-inverse">
-    <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#questionModal" data-whatever="@mdo">Ask Question</button>
-    <%= render 'home/question_form' %>
-  </nav>
+
 <div class="container">
-  <div class="well"><%= current_user_email %></div>
+  <%= render "home/nav_bar" %>
   <%= yield %>
 </div>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>

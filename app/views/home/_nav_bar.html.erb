@@ -1,0 +1,21 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div navbar-header>
+    </div>
+  </div>
+  <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        |
+        <li style="color:white" class="navbar-text">
+          <%= current_user_email %>
+        </li>
+        |
+        <li>
+          <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#questionModal">
+            Ask Question
+          </button>
+        </li>
+      </ul>
+  </div>
+  <%= render 'home/question_form' %>
+</nav>
