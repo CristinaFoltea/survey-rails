@@ -10,11 +10,13 @@
     </div>
     <div class="media-body">
       <h4 class="media-heading"><%= q.email %> asked</h4>
-      <%= time_ago_in_words q.created_at %> ago
+      <time class="hidden-xs">
+        <%= time_ago_in_words q.created_at %> ago
+      </time>
       <br>
-      <%= q.body %>
+      <%= truncate q.body, length: 300 %>
         <div>
-          <a href="<%= question_path(q) %>" class="btn btn-success btn-xs">View Answer</a>
+          <a href="<%= question_path(q) %>" class="btn btn-success btn-xs hidden-xs">View Answer</a>
         </div>
     </div>
   </div>
